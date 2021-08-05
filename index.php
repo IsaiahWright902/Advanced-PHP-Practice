@@ -33,6 +33,7 @@ explode(',', $pizzas[0]['ingredients']);
         <?php foreach ($pizzas as $pizza) :  ?>
             <div class="col s6 md3 ">
                 <div class="card z-depth-0">
+                    <img src="img/pizza.svg" class="pizza" alt="">
                     <div class="card-content center">
                         <h6><?php echo htmlspecialchars($pizza['title']); ?></h6>
                         <ul>
@@ -47,12 +48,6 @@ explode(',', $pizzas[0]['ingredients']);
                 </div>
             </div>
         <?php endforeach; ?>
-
-        <?php if (count($pizzas) >= 2) : ?>
-            <p>there are two or more pizzas</p>
-        <?php else :  ?>
-            <p>there are less than 2 pizzas</p>
-        <?php endif ?>
     </div>
 </div>
 
