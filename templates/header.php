@@ -9,6 +9,9 @@ if ($_SESSION['QUERY_STRING'] = 'noname') {
 
 $name = $_SESSION['name'] ?? 'Guest'; // setting a variable equal to one of two things. If the first value does not exist it will set it to the second.
 
+//get cookie
+$gender = $_COOKIE['gender'] ?? 'Unknown';
+
 
 
 ?>
@@ -51,6 +54,8 @@ $name = $_SESSION['name'] ?? 'Guest'; // setting a variable equal to one of two 
             <a href="index.php" class="brand-logo brand-text">Ninja Pizza</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
                 <li class="grey-text">Hello, <?php echo htmlspecialchars($name) ?></li>
+                <li class="grey-text">( <?php echo htmlspecialchars($gender) ?>)</li>
+
                 <li><a href="add.php" class="btn brand z-depth">Add A Pizza</a></li>
             </ul>
         </div>
